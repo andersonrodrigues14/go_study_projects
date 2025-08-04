@@ -33,5 +33,12 @@ func main() {
 	//fmt.Println("Futere Value (adjusted for Inflation): ",futereRealValue)
 	//fmt.Printf("Futere Value: %.2f\n", futereValeu)
 	//fmt.Printf("Futere Value (adjusted for Inflation): %.2f",futereRealValue)
+
+	//More lines
+	// fmt.Printf(`
+	// Futere Value: %.2f
+	// Futere Value (adjusted for Inflation): %.2f
+	// ` ,futereRealValue, futereRealValue)
+
 	fmt.Print(formattedFV, formattedRFV)
 }
