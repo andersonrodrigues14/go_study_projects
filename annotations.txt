@@ -3,6 +3,11 @@ Commands Basic:
  - go mod init [example.com/first-app] -> transform a project in a module (essencial principalmente para trabalhar com gerenciamento de dependências)
  - go build -> create a executable go project
 
+
+
+
+
+
 Basic Types
  Go comes with a couple of built-in basic types:
 
