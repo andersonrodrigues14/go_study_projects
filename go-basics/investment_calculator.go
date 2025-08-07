@@ -50,8 +50,8 @@ func outputTex(text string) {
 	fmt.Print(text)
 }
 
-func calculateFutereValues(investmentAmount float64, expectedReturnRate float64, years float64, inflationRate float64) (float64, float64) {
-	fv := investmentAmount * math.Pow(1+expectedReturnRate/100, years)
-	rfv := fv / math.Pow(1+inflationRate/100, years)
+func calculateFutereValues(investmentAmount float64, expectedReturnRate float64, years float64, inflationRate float64) (fv float64, rfv float64) {
+	fv = investmentAmount * math.Pow(1+expectedReturnRate/100, years)
+	rfv = fv / math.Pow(1+inflationRate/100, years)
 	return fv, rfv
 }
