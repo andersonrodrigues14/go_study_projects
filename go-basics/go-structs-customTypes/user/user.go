@@ -19,8 +19,8 @@ type Admin struct {
 	User
 }
 
-func NewAdmin(email, password string) *Admin {
-	return &Admin{
+func NewAdmin(email, password string) Admin {
+	return Admin{
 		email:    email,
 		password: password,
 		User: User{
