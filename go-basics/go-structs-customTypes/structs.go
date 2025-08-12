@@ -19,7 +19,10 @@ func main() {
 		fmt.Print(err)
 		return
 	}
-
+	admin := user.NewAdmin("teste@example.com", "test123")
+	admin.User.OutputUserDetails()
+	admin.User.ClearUserName()
+	admin.User.OutputUserDetails()
 	// ... do something awesome with that gathered data!
 
 	appUser.OutputUserDetails()
