@@ -30,6 +30,11 @@ func main() {
 
 	fmt.Println("Anonymous Functions: ", transformed)
 
+	//Closures
+	double := createTransformer(2)
+	doubled2 := transformNumbers(&numbers, double)
+	fmt.Println("Closures: ", doubled2)
+
 }
 
 // func transformNumbers(numbers *[]int, transform transformFn) []int {
@@ -62,4 +67,10 @@ func double(number int) int {
 
 func triple(number int) int {
 	return number * 3
+}
+
+func createTransformer(factor int) func(int) int{
+	return func(number int) int{
+		return number * factor
+	}
 }
