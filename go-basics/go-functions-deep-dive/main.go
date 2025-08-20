@@ -39,6 +39,22 @@ func main() {
 	fact := factorial(5)
 	fmt.Println(fact)
 
+	//Using Variadic Functions
+	//numbers2 := []int{1, 10, 15}
+	//sum := sumup(numbers2...)
+	sum := sumup(10, 1, 15)
+	fmt.Println(sum) 
+
+}
+
+func sumup(numbers ...int) int {
+	sum := 0
+
+	for _, val := range numbers {
+		sum += val
+	}
+
+	return sum
 }
 
 // func transformNumbers(numbers *[]int, transform transformFn) []int {
