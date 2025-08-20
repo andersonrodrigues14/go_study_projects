@@ -35,6 +35,10 @@ func main() {
 	doubled2 := transformNumbers(&numbers, double)
 	fmt.Println("Closures: ", doubled2)
 
+	// Recursion Functions
+	fact := factorial(5)
+	fmt.Println(fact)
+
 }
 
 // func transformNumbers(numbers *[]int, transform transformFn) []int {
@@ -44,6 +48,21 @@ func main() {
 // 	}
 // 	return dNumbers
 // }
+
+func factorial(number int) int {
+	if number == 0 {
+		return 1
+	}
+	return number * factorial(number - 1)
+
+	// result := 1
+
+	// for i:= 1; i <= number; i++ {
+	// 	result = result * i
+	// }
+
+	// return result
+}
 
 func transformNumbers(numbers *[]int, transform func(int) int) []int {
 	dNumbers := []int{}
