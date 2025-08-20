@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type transformFn func(int) int
 
@@ -21,9 +23,24 @@ func main() {
 	fmt.Println(transformedNumbers)
 	fmt.Println(moreTransformedNumbers)
 
+	//Anonymous Functions
+	transformed := transformNumbers(&numbers, func(number int)  int {
+		return number * 2
+	})
+
+	fmt.Println("Anonymous Functions: ", transformed)
+
 }
 
-func transformNumbers(numbers *[]int, transform transformFn) []int {
+// func transformNumbers(numbers *[]int, transform transformFn) []int {
+// 	dNumbers := []int{}
+// 	for _, val := range *numbers {
+// 		dNumbers = append(dNumbers, transform(val))
+// 	}
+// 	return dNumbers
+// }
+
+func transformNumbers(numbers *[]int, transform func(int) int) []int {
 	dNumbers := []int{}
 	for _, val := range *numbers {
 		dNumbers = append(dNumbers, transform(val))
